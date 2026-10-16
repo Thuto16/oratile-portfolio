@@ -220,30 +220,56 @@ h3 {
    6. SKILLS
 ========================= */
 
+#skills {
+    padding: 80px 20px;
+}
+
 .skills-container {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 12px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+    max-width: 1000px;
+    margin: 30px auto 0;
 }
 
-.skill-badge {
-    background-color: #111C32;
-    color: #93C5FD;
-    border: 1px solid #24324A;
+.skill-card {
+    background: #111B30;
+    border: 1px solid #293957;
+    border-radius: 14px;
+    padding: 24px;
+    transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.skill-card:hover {
+    transform: translateY(-5px);
+    border-color: #7C83FF;
+}
+
+.skill-card h3 {
+    color: #8B9DFF;
+    margin-bottom: 18px;
+}
+
+.skill-card ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.skill-card li {
+    background: #1B2942;
+    color: #E2E8F0;
+    border: 1px solid #334565;
     border-radius: 8px;
-    padding: 10px 16px;
-    font-size: 0.95rem;
-    transition:
-        background-color 0.3s ease,
-        border-color 0.3s ease,
-        transform 0.3s ease;
+    padding: 10px 12px;
+    margin-bottom: 10px;
+    font-size: 15px;
 }
 
-.skill-badge:hover {
-    background-color: #1E3A5F;
-    border-color: #3B82F6;
-    transform: translateY(-2px);
+.skill-card li:last-child {
+    margin-bottom: 0;
 }
+
 
 
 /* =========================
